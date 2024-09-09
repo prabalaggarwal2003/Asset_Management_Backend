@@ -11,7 +11,7 @@ var (
 
 func Connect() {
 
-	d, err := gorm.Open("mysql", "avnadmin:AVNS_RFIGYSWDDEJ84pJeLnC@mysql-a94996d-aggarwalprabal1-dc76.e.aivencloud.com:16598/issue?ssl-mode=REQUIRED")
+	d, err := gorm.Open("mysql", "mysql://avnadmin:AVNS_RFIGYSWDDEJ84pJeLnC@mysql-a94996d-aggarwalprabal1-dc76.e.aivencloud.com:16598/issue?ssl-mode=REQUIRED")
 	if err != nil {
 		panic(err)
 	}
