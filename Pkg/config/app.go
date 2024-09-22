@@ -2,7 +2,7 @@ package config
 
 import (
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "github.com/lib/pq"
 )
 
 var (
@@ -11,7 +11,7 @@ var (
 
 func Connect() {
 
-	d, err := gorm.Open("mysql", "mysql://avnadmin:AVNS_RFIGYSWDDEJ84pJeLnC@mysql-a94996d-aggarwalprabal1-dc76.e.aivencloud.com:16598/issue?ssl-mode=REQUIRED")
+	d, err := gorm.Open("postgres", "host=localhost port=5432 dbname=issue user=postgres password=<your_db_password> connect_timeout=10 sslmode=disable")
 	if err != nil {
 		panic(err)
 	}
